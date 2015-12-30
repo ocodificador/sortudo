@@ -1,0 +1,17 @@
+<h1>Sortudo</h1>
+
+<div ng-controller='SortudoCtrl'>
+	<form ng-submit='addPlayer()'>
+		<input type='text' placeholder = 'Name' ng-model='newPlayer.name'>
+		<input type='submit' value='Add'>
+	</form>
+  <ul>
+		<li ng-repeat='player in players'>
+			{{player.name}}
+			<div style='float: right'>{{player.score}}</div>
+		</li>
+	</ul>
+	<button ng-click='eraseAll()' id='erase_all'>Erase All</button>
+	<button ng-disabled="players.length < 2" ng-click='rollDice()' >Roll the dice</button>
+	
+</div>

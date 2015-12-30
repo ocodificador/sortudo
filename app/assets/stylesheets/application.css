@@ -1,0 +1,121 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+html, body {
+  background-color: #4B7399;
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #0000FF;
+}
+
+.clear {
+  clear: both;
+  height: 0;
+  overflow: hidden;
+}
+
+#container {
+  width: 600px;
+  margin: 0 auto;
+  background-color: #FFF;
+  padding: 20px 40px;
+  border: solid 1px black;
+  margin-top: 20px;
+}
+
+form input {
+  font-size: 20px;
+}
+
+form input[type='text'] {
+  width: 535px;
+}
+
+form input[type='submit'], button {
+  -webkit-appearance: caret;
+	font-size: 14px;
+  font-size: 13px;
+  padding: 5px 9px 6px 9px;
+  font-weight: bold;
+  border: 1px solid #466A98;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  color: #FFF;
+  background: #25732B;
+  text-decoration: none;
+  text-align: middle;
+  vertical-align: top;
+	
+	/*	Just for fun*/
+	cursor: pointer;
+}
+
+button:disabled {
+  background: #dddddd;
+	border-color: #dddddd;
+	cursor: not-allowed;
+}
+
+button {
+  margin: 20px auto;	
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+  margin: 10px 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 10px;
+  border-top: solid 1px #CCC;
+}
+
+li {
+  border-bottom: solid 1px #CCC;
+  padding: 10px 10px;
+  font-size: 16px;
+  position: relative;
+  .winner {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #999;
+    &.highlight {
+      color: #DD0000;
+      font-weight: bold;
+    }
+  }
+}
+
+#erase_all {
+	float: right;
+  background: red;
+  border: 1px solid red;
+	
+}
