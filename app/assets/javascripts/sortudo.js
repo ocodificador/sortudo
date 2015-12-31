@@ -55,8 +55,8 @@ app.controller('SortudoCtrl', ['$scope', 'Player', function($scope, Player) {
 	// Help me, please
 	//
 	$scope.rollDice = function(player) {
-		player.$roll();	
-		$scope.players = Player.query();			
+		player.$roll();
+		$scope.players = Player.query();
 	};
 	
 	//

@@ -112,6 +112,7 @@ li {
 #player_btns {
 	position: absolute;
 	right: 0px;
+	top: -15px;
 }
 
 #player_btns > .stop:enabled {

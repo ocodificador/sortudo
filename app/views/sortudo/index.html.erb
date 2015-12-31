@@ -1,4 +1,4 @@
-<h1>Sortudo</h1>
+<h1>Lucky Guy</h1>
 
 <div ng-controller='SortudoCtrl'>
 	<form ng-submit='addPlayer()'>
@@ -13,11 +13,11 @@
 		</li>
 		<li ng-repeat='player in players'>
 			<div id='player_btns'>
-				<button ng-disabled="!(player.able)" ng-click='rollDice(player)'>Roll</button>
-				<button ng-disabled="!(player.able)" class='stop' ng-click='stopMe(player)'>Stop</button>
+				<button ng-disabled='!(player.able) || (players.length < 2)' ng-click='rollDice(player)'>Roll</button>
+				<button ng-disabled='!(player.able) || (players.length < 2)' class='stop' ng-click='stopMe(player)'>Stop</button>
 			</div>
 			{{player.name}}
-			<span ng-show="player.winner"> -- The Winner</span>
+			<span ng-show='player.winner'>** The Winner **</span>
 			<div>
 				{{player.turn}},
 				{{player.last_dice}},
@@ -28,6 +28,6 @@
 			</div>
 		</li>
 	</ul>
-	<button ng-disabled="players.length < 2" ng-click='newGame()'>New Game</button>
-	<button ng-click='eraseAll()' id='erase_all'>Erase All</button>
+	<button ng-disabled='players.length < 2' ng-click='newGame()'>New Game</button>
+	<button ng-click='eraseAll()' id='erase_all'>Drop All</button>
 </div>
