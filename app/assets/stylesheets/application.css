@@ -101,21 +101,23 @@ li {
   padding: 10px 10px;
   font-size: 16px;
   position: relative;
-  .winner {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    color: #999;
-    &.highlight {
-      color: #DD0000;
-      font-weight: bold;
-    }
-  }
 }
 
 #erase_all {
 	float: right;
   background: red;
   border: 1px solid red;
-	
+}
+
+#player_btns {
+	position: absolute;
+	right: 0px;
+}
+
+#player_btns > .stop:enabled {
+  background: blue;
+}
+
+#winner {
+	background-color: green;
 }
