@@ -3,7 +3,7 @@ class PlayersController < ApplicationController
   respond_to :json
 
   def index
-    render :json => Player.all
+    render :json => Player.all.order(:id)
   end
 
   def show
