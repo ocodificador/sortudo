@@ -24,5 +24,9 @@ group :development do
   gem 'spring'
 end
 
+group :production do
+  gem 'pg'
+end
+
 gem 'angularjs-rails'
 gem 'responders'
