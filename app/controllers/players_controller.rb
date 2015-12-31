@@ -58,6 +58,7 @@ class PlayersController < ApplicationController
     # Verify if the player may play on this turn
     player.able = (player.dice_left > 1)
     
+    # Save 
     player.score = player.score + player.turn_score unless player.able
 
     player.save

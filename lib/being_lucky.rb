@@ -50,7 +50,7 @@ class BeingLucky
     num == 1 ? 1000 : num * 100
   end
 
-  # Just 1 and 5 are special, they may be in both status
+  # Just 1 and 5 are special, they may be score on two ways
   def non_triplet(num, non_triplet_count)
     if num == 1 and non_triplet_count > 0
       @dice.pop(non_triplet_count)
